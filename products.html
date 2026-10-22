@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse North Star Bakery breads, pastries, and cakes with price ranges.">
+  <title>Breads, Pastries, and Cakes | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a href="#main-content">Skip to main content</a>
+
+  <header>
+    <img src="images/bakery-logo_c.png" alt="North Star Bakery logo: a loaf of bread with a wheat stalk above the words North Star Bakery" width="200" height="171">
+    <h1>Our Breads, Pastries, and Cakes</h1>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" aria-current="page">Our Breads, Pastries and Cakes</a></li>
+          <li><a href="about.html">About North Star Bakery</a></li>
+          <li><a href="contact.html">Contact and Pre-Orders</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="intro-heading">
+      <h2 id="intro-heading">Baked by Hand, Fresh Every Morning</h2>
+      <p>Browse what we bake each day. Prices are approximate ranges, and there is no online checkout. Simply send us a pre-order request and we will confirm the details with you.</p>
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/bakery-feature-large_c.png">
+        <img src="images/bakery-feature-small_c.png" alt="Trays of freshly baked cookies, sugar-topped pastries, and glazed rolls on wooden shelves in the bakery display case" width="600">
+      </picture>
+    </section>
+
+    <section class="third" aria-labelledby="breads-heading">
+      <h2 id="breads-heading">Breads</h2>
+      <img src="images/bakery-bread_c.png" alt="Close-up of rustic loaves of seeded and floured bread in the bakery display case" width="400" height="400">
+      <p>Our breads are mixed, shaped, and baked by hand each morning. Choose from sourdough boules, seeded multigrain loaves, baguettes, and soft sandwich loaves.</p>
+      <p><strong>Price range:</strong> $5 &ndash; $9 per loaf</p>
+    </section>
+
+    <section class="third" aria-labelledby="pastries-heading">
+      <h2 id="pastries-heading">Pastries</h2>
+      <p>Flaky, buttery, and made for sharing. Our pastry case includes croissants, fruit danishes, cinnamon rolls, scones, and cookies. Ask about dozen boxes for offices and family gatherings.</p>
+      <p><strong>Price range:</strong> $3 &ndash; $6 each; $30 &ndash; $60 per dozen box</p>
+    </section>
+
+    <section class="third" aria-labelledby="cakes-heading">
+      <h2 id="cakes-heading">Cakes</h2>
+      <p>From simple birthday cakes to tiered celebration cakes, we bake to order using real butter, cream, and seasonal fruit. Please allow at least 72 hours for custom cakes.</p>
+      <p><strong>Price range:</strong> $35 &ndash; $120, depending on size and design</p>
+    </section>
+
+    <section id="preorder-picker" aria-labelledby="picker-heading">
+      <h2 id="picker-heading">Build Your Pre-Order List</h2>
+      <p>Pick the items you would like and we will remember your list on this device. When you open the contact page, your list fills in the pre-order form for you.</p>
+      <noscript><p>This tool needs JavaScript. You can still list your items by hand on the <a href="contact.html">Contact and Pre-Orders page</a>.</p></noscript>
+
+      <p>
+        <label for="category-filter">Show items from</label><br>
+        <select id="category-filter" name="category_filter">
+          <option value="All">All items</option>
+          <option value="Breads">Breads</option>
+          <option value="Pastries">Pastries</option>
+          <option value="Cakes">Cakes</option>
+        </select>
+      </p>
+      <ul id="product-options" class="product-list"></ul>
+
+      <h3>My Pre-Order List</h3>
+      <ul id="my-list" class="product-list" aria-live="polite"></ul>
+      <p id="list-status" role="status"></p>
+      <p>
+        <button type="button" id="clear-list" class="button-secondary" hidden>Clear my list</button>
+        <a id="send-preorder" href="contact.html" hidden>Send my pre-order request</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="order-heading">
+      <h2 id="order-heading">Ready to Order?</h2>
+      <p>Send us a pre-order request through our <a href="contact.html">Contact and Pre-Orders page</a>. Please tell us about any allergies so we can help you choose safely.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>North Star Bakery &ndash; 214 Maple Street, Anytown, USA 00000</p>
+    <p>Phone: <a href="tel:+15555550142">(555) 555-0142</a> | Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a></p>
+    <p>&copy; 2026 North Star Bakery. Baked fresh, shared with the neighborhood.</p>
+  </footer>
+</body>
+</html>

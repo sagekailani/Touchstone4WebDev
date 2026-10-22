@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send a pre-order request or question to North Star Bakery, and find our hours and location.">
+  <title>Contact and Pre-Orders | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a href="#main-content">Skip to main content</a>
+
+  <header>
+    <img src="images/bakery-logo_c.png" alt="North Star Bakery logo: a loaf of bread with a wheat stalk above the words North Star Bakery" width="200" height="171">
+    <h1>Contact and Pre-Orders</h1>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Our Breads, Pastries and Cakes</a></li>
+          <li><a href="about.html">About North Star Bakery</a></li>
+          <li><a href="contact.html" aria-current="page">Contact and Pre-Orders</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="form-section" aria-labelledby="form-heading">
+      <h2 id="form-heading">Pre-Order or Ask a Question</h2>
+      <p>Fill out the form below to request a pre-order or send us a question. We will reply by email to confirm availability and pickup details. Fields marked required must be completed.</p>
+
+      <form id="preorder-form" action="#" method="post">
+        <fieldset>
+          <legend>Your Contact Information</legend>
+          <p>
+            <label for="full-name">Full name (required)</label><br>
+            <input type="text" id="full-name" aria-describedby="full-name-error" name="full_name" required minlength="2" maxlength="60" pattern="[A-Za-z][A-Za-z '.-]{1,59}" title="Please enter your name using letters, spaces, apostrophes, periods, or hyphens." autocomplete="name">
+            <span class="error-message" id="full-name-error" aria-live="polite"></span>
+          </p>
+          <p>
+            <label for="email">Email address (required)</label><br>
+            <input type="email" id="email" aria-describedby="email-error" name="email" required autocomplete="email">
+            <span class="error-message" id="email-error" aria-live="polite"></span>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Request</legend>
+          <p>
+            <label for="request-type">Request type (required)</label><br>
+            <select id="request-type" aria-describedby="request-type-error" name="request_type" required>
+              <option value="">Choose a request type</option>
+              <option value="pre-order">Pre-order</option>
+              <option value="general-question">General question</option>
+              <option value="event-order">Event or large order inquiry</option>
+            </select>
+            <span class="error-message" id="request-type-error" aria-live="polite"></span>
+          </p>
+          <p>
+            <label for="pickup-date">Pickup date (required for pre-orders)</label><br>
+            <input type="date" id="pickup-date" aria-describedby="pickup-date-error" name="pickup_date" required>
+            <span class="error-message" id="pickup-date-error" aria-live="polite"></span>
+          </p>
+          <p id="prefill-note" class="note" hidden>We filled this in from your saved pre-order list. You can edit it, or <a href="products.html#preorder-picker">change your list</a>.</p>
+          <p>
+            <label for="item-details">Item details (required)</label><br>
+            <textarea id="item-details" aria-describedby="item-details-error" name="item_details" rows="5" cols="40" required minlength="10" maxlength="500" placeholder="Example: 1 Signature Loaf and 6 cinnamon rolls"></textarea>
+            <span class="error-message" id="item-details-error" aria-live="polite"></span>
+          </p>
+          <p>
+            <label for="allergy-notes">Allergy notes (optional)</label><br>
+            <textarea id="allergy-notes" aria-describedby="allergy-notes-error" name="allergy_notes" rows="3" cols="40" maxlength="300" placeholder="Example: Please avoid tree nuts"></textarea>
+            <span class="error-message" id="allergy-notes-error" aria-live="polite"></span>
+          </p>
+        </fieldset>
+
+        <p><button type="submit">Send My Request</button></p>
+        <p id="form-status" class="form-status" role="status" tabindex="-1"></p>
+      </form>
+    </section>
+
+    <section class="half" aria-labelledby="location-heading">
+      <h2 id="location-heading">Find Us</h2>
+      <address>
+        North Star Bakery<br>
+        214 Maple Street<br>
+        Anytown, USA 00000
+      </address>
+      <p>We are a short walk from the Maple Street bus stop, with street parking available nearby.</p>
+    </section>
+
+    <section class="half" aria-labelledby="hours-heading">
+      <h2 id="hours-heading">Hours of Operation</h2>
+      <ul>
+        <li>Monday: Closed</li>
+        <li>Tuesday &ndash; Friday: 6:30 a.m. &ndash; 5:00 p.m.</li>
+        <li>Saturday: 6:30 a.m. &ndash; 5:00 p.m.</li>
+        <li>Sunday: 7:00 a.m. &ndash; 2:00 p.m.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>North Star Bakery &ndash; 214 Maple Street, Anytown, USA 00000</p>
+    <p>Phone: <a href="tel:+15555550142">(555) 555-0142</a> | Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a></p>
+    <p>&copy; 2026 North Star Bakery. Baked fresh, shared with the neighborhood.</p>
+  </footer>
+</body>
+</html>
